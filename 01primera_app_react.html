@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mi primera aplicación React</title>
+    <meta charset="utf-8">
+    <!-- Carga de las bibliotecas de React -->  
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script type="text/babel">
+      // Creación de un componente.
+      // Componente App que representa la aplicación React
+      function App() {
+        // Código JavaScript
+
+        // Código JSX
+        return (
+          <h1>Bienvenido a React</h1>
+        );
+      }
+
+      const contenedor = document.getElementById("raiz");
+      const raiz = ReactDOM.createRoot(contenedor);
+      raiz.render (
+        <App />
+      );
+    </script>
+
+  </head>
+  <body>
+    <div id="raiz"></div>
+  </body>
+</html>
