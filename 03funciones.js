@@ -103,6 +103,12 @@ const usuario = () => ({ login: "pepe", perfil: "Admin", nivel: 0 });
 const objetoUsuario = usuario();
 console.log(objetoUsuario);
 
+// Función flecha con otra función flecha como expresión
+const circulo3 = (r) => (r) => r * r * Math.PI;
+const circulo4 = circulo3(2);
+console.log(`El área del círculo con radio 2 es ${circulo4(2)}`);
+
+
 
 
 
