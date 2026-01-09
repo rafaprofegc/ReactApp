@@ -160,3 +160,19 @@ function direcciones(...localidades) {
 const recorrido = ["Córdoba", "La Carlota", "Ecija", "la Luisiana", "Carmona", "Sevilla"];
 direcciones("Córdoba", "La Carlota", "Ecija", "la Luisiana", "Carmona", "Sevilla");
 direcciones(...recorrido);
+
+// El operador ... aplicado a objetos
+const primeraComida = {
+  desayuno: "cereales",
+  almuerzo: "yogurt"
+};
+const segundaComida = "Ensalada y agua";
+const terceraComida = "Salmón a la plancha";
+
+const dieta = {
+  ...primeraComida,
+  segundaComida,
+  terceraComida
+};
+console.log(`Esta es mi dieta`);
+console.log(dieta);
