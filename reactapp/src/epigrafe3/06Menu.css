@@ -1,0 +1,38 @@
+/*
+Archivo CSS para los componentes del menú
+Este archivo se importa con
+
+import './06Menu.css'
+
+en cada archivo js que contiene los componentes que
+lo utilizan
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+.barra {
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  padding: 0.5em;
+}
+
+.menu {
+  list-style-type: none;
+
+  display: flex;
+  column-gap: 0.5em;
+  margin-left: auto;
+}
+
+.menu-item {
+  border: 0.1em solid gray;
+  padding: 0.5em;
+  text-decoration: none;
+}
+
+.titulo {
+  font-size: 1.5em;
+}
