@@ -1,22 +1,15 @@
 import logo from './logo.svg';
 import './App.css';
 
-// Componente React
-// Todos los componente se definen con una
-// función JavaScript -> Componentes funcionales
+// Epígrafe 3.3 Personalización de componentes
+// 3.3.2 Propiedad children
 
-import Enlace from './epigrafe3/01Enlace.js';
+import Menu from './epigrafe3/06Menu';
 
 function App() {
-  // Código JavaScript
-  // Aquí se incluye código JavaScript
-  // necesario para renderizar el componente
-
+  
   return (
-    <div>
-      <h2>Componente enlace</h2>
-      <Enlace/>
-    </div> 
+    <Menu/>
   );
 }
 
