@@ -21,8 +21,7 @@ import './App.css';
     siguiente la misma lógica que el botón Pagar.
 
   */
-import CarritoCompra from './epigrafe4/07CarritoCompra';
-
+import CarritoCompra from './epigrafe4/06CarritoCompra';
 function App() {
   const usuario = {
     login: "pepe",
