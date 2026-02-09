@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 
-// Epígrafe 5.2 Añadir estado a un componente
+// Epígrafe 5.2.2 El valor inicial de la variable de estado
 
 import Contador from './epigrafe5/01Contador';
 
