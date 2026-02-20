@@ -14,4 +14,11 @@ function Contador({inicio}) {
 
   const [contador, setContador] = useState( inicio );
 
+  return (
+    <p style={{display:"flex", flexDirection:"row",gap:"1em"}}>
+      Contador: {contador}&nbsp;
+      <button onClick={() => setContador((actual) => actual + 1)}>Incrementar</button>
+    </p>
+  );
 }
+export default Contador;

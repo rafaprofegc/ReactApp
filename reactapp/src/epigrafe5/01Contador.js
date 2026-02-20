@@ -16,8 +16,8 @@ function Contador() {
   // Devuelve un array con la variable de estado y la función setter
   // El array habitualmente se desestructura
   const [contador, setContador] = useState(0); 
-
   const funcionOnclic = () => setContador( (actual) => actual + 1);
+  
   return (
     <main>
       Contador: {contador} &nbsp;
@@ -25,7 +25,7 @@ function Contador() {
        - El nuevo valor
        - Una función que recibe el valor actual y devuelve el nuevo valor */}
        
-      <button onClick={() => setContador( (actual) => contador + 1)}>Incrementar</button>
+      <button onClick={() => setContador((actual) => actual + 1)}>Incrementar</button>
     </main>
   );
 }
