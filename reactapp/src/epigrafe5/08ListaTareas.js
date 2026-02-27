@@ -19,21 +19,26 @@ function ListaTareas({tareas}) {
   const estiloHecha = {color: "red", textDecoration:"line-through"};
   const estiloPendiente = { color: "blue", textDecoration:"none"};
 
-  function CambiarTarea(indice) {
-
-    setListaTareas(nuevaLista);
+  function CambiarTarea(tareas, indice) {
+    return tareas.map( (tarea) => 
+      tarea.indice === indice ? {...tarea, hecha: !tarea.hecha} : tarea);
+  
+    // {...tarea,                                    hecha: !tarea.hecha}
+    // { descripcion: ..., hecha: false, indice = 3, hecha: true }
+    // { descripcion: ..., hecha: true, indice = 3 }
   }
   // Una copia de la lista con los elementos que se van a mostrar
   const listaMostrar = listaTareas.filter((e) => e.hecha === false || !verPendientes);
+
   return (
     <main>
       <input type="checkbox" onChange={() => setVerPendientes(!verPendientes)}/>Ver solo pendientes
       <ul>
         {
-          listaMostrar.map( (tarea) => 
-            <li key={tarea.indice} style={tarea.hecha ? estiloHecha : estiloPendiente}>
-              {tarea.descripcion}&nbsp;
-              <button onClick={() => CambiarTarea(indice)}>{tarea.hecha ? "Por hacer" : "Hecha"}</button>
+          listaMostrar.map( ({descripcion, hecha, indice}) => 
+            <li key={indice} style={hecha ? estiloHecha : estiloPendiente}>
+              {descripcion}&nbsp;
+              <button onClick={() => setListaTareas( (actual) => CambiarTarea(actual, indice))}>{hecha ? "Pendiente" : "Hecha"}</button>
             </li>
           )
         }
