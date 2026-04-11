@@ -1,0 +1,36 @@
+/* Formato para la tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em;
+}
+
+td, th {
+  border: 1px solid darkblue;
+}
+
+th {
+  background-color: lightpink;
+  color: darkblue;
+}
+
+td {
+  background-color: whitesmoke;
+  color: darkslateblue;
+}
+
+/* Estilos para el formulario */
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  row-gap: 0.3em;
+}
+
+label {
+  display: inline-block;
+  width: 15%;
+  text-align: right;
+  margin-right: 0.5em;
+  vertical-align: top;
+}

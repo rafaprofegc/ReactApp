@@ -20,6 +20,7 @@ function EventosRaton() {
   const [estaMoviendose, setMoviendose] = useState(false);
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
+  const [dentro, setDentro] = useState(false);
 
   useEffect( () => {
     if( !estaMoviendose ) return;
@@ -43,7 +44,9 @@ function EventosRaton() {
 
       <h1 onClick={ (evt) => CambiarCoordenadas(evt)  }>Haz clic sobre esté título {x !== 0 && y !== 0 && `Coordenadas: ${x},${y}`}</h1>
 
-      <h1 onMouseEnter={} onMouseLeave={}>¿Está el ratón aquí? {dentro ? "Si" : "No"}</h1>
+      <h1 onMouseEnter={() => setDentro(true)} onMouseLeave={() => setDentro(false)}>
+        ¿Está el ratón aquí? {dentro ? "Si" : "No"}
+      </h1>
     </section>
   );
 }
