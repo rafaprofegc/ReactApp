@@ -34,3 +34,15 @@ label {
   margin-right: 0.5em;
   vertical-align: top;
 }
+
+.error {
+  color: red;
+}
+
+.input_ok {
+  border-color: auto;
+}
+
+.input_error {
+  border-color: red;
+}
